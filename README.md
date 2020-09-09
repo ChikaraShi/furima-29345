@@ -60,6 +60,21 @@ Things you may want to cover:
 
 - belongs_to :user
 
+## shippong テーブル
+
+| Column    | Type   | Options     |
+| --------- | ------ | ----------- |
+| postcode  | string | null: false |
+| state     | string | null: false |
+| city      | string | null: false |
+| add_line  | string | null: false |
+| building  | string | null: false |
+| number    | string | null: false |
+
+### Association
+
+- belongs_to :user
+
 
 
 
