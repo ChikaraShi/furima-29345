@@ -73,7 +73,7 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :user
+- belongs_to :purchase
 
 
 ## purchase テーブル
@@ -87,4 +87,4 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
-
+- has_many :shipping
