@@ -68,7 +68,7 @@ Things you may want to cover:
 | state     | string | null: false |
 | city      | string | null: false |
 | add_line  | string | null: false |
-| building  | string | null: false |
+| building  | string |             |
 | number    | string | null: false |
 
 ### Association
@@ -80,9 +80,9 @@ Things you may want to cover:
 
 | Column    | Type   | Options     |
 | --------- | ------ | ----------- |
-| card_num  | string | null: false |
-| expiry     | string | null: false |
-| security  | string | null: false |
+| user      | string | null: false |
+| item      | string | null: false |
+| bought_at | date | null: false |
 
 ### Association
 
