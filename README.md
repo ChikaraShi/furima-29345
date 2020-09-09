@@ -45,21 +45,21 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column       | Type    | Options                        |
-| ------------ | ------- | ------------------------------ |
-| name         | string  | null: false                    |
-| introduce    | text    | null: false                    |
-| type_id      | integer | null: false                    |
-| codition_id  | integer | null: false                    |
-| ship_fee_id  | integer | null: false                    |
-| ship_from_id | integer | null: false, foreign_key: true |
-| ship_date_id | integer | null: false, foreign_key: true |
-| price        | integer | null: false                    |
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| name         | string  | null: false |
+| introduce    | text    | null: false |
+| type_id      | integer | null: false |
+| codition_id  | integer | null: false |
+| ship_fee_id  | integer | null: false |
+| ship_from_id | integer | null: false |
+| ship_date_id | integer | null: false |
+| price        | integer | null: false |
 
 ### Association
 
-- belongs_to :users
-- has_one :purchases
+- belongs_to :user
+- has_one :purchase
 
 ## shippings テーブル
 
@@ -74,16 +74,18 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :purchases
+- belongs_to :purchase
 
 
-## purchases テーブル
+## purchase テーブル
 
-| Column    | Type   | Options                        |
-| --------- | ------ | ------------------------------ |
-| user      | string | null: false, foreign_key: true |
-| item      | string | null: false, foreign_key: true |
+| Column    | Type   | Options                            |
+| --------- | ------ | ---------------------------------- |
+| user      | references | null: false, foreign_key: true |
+| item      | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_one :shippings
+- has_one :shipping
+- belongs_to :users
+- belongs_to :items
