@@ -48,13 +48,13 @@ Things you may want to cover:
 | Column       | Type    | Options     |
 | ------------ | ------- | ----------- |
 | name         | string  | null: false |
-| introduce    | string  | null: false |
+| introduce    | text    | null: false |
 | type_id      | integer | null: false |
 | codition_id  | integer | null: false |
 | ship_fee_id  | integer | null: false |
 | ship_from_id | integer | null: false |
 | ship_date_id | integer | null: false |
-| price_id     | integer | null: false |
+| price        | integer | null: false |
 
 ### Association
 
