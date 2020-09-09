@@ -58,33 +58,32 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :user
+- belongs_to :users
 - has_one :purchases
 
-## shipping テーブル
+## shippings テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| postcode     | string  | null: false |
-| state        | integer | null: false |
-| city         | string  | null: false |
-| add_line     | string  | null: false |
-| building     | string  |             |
-| phone_number | string  | null: false |
-
-### Association
-
-- belongs_to :purchase
-
-
-## purchase テーブル
-
-| Column    | Type   | Options     |
-| --------- | ------ | ----------- |
-| user      | string | null: false |
-| item      | string | null: false |
+| Column       | Type    | Options                        |
+| ------------ | ------- | ------------------------------ |
+| postcode     | string  | null: false                    |
+| state        | integer | null: false                    |
+| city         | string  | null: false                    |
+| add_line     | string  | null: false, foreign_key: true |
+| building     | string  |                                |
+| phone_number | string  | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :user
-- has_many :shipping
+- belongs_to :purchases
+
+
+## purchases テーブル
+
+| Column    | Type   | Options                        |
+| --------- | ------ | ------------------------------ |
+| user      | string | null: false, foreign_key: true |
+| item      | string | null: false, foreign_key: true |
+
+### Association
+
+- has_one :shippings
