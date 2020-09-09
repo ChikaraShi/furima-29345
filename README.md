@@ -76,5 +76,15 @@ Things you may want to cover:
 - belongs_to :user
 
 
+## purchase テーブル
 
+| Column    | Type   | Options     |
+| --------- | ------ | ----------- |
+| card_num  | string | null: false |
+| expiry     | string | null: false |
+| security  | string | null: false |
+
+### Association
+
+- belongs_to :user
 
