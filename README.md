@@ -45,22 +45,23 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| name         | string  | null: false |
-| introduce    | text    | null: false |
-| type_id      | integer | null: false |
-| codition_id  | integer | null: false |
-| ship_fee_id  | integer | null: false |
-| ship_from_id | integer | null: false |
-| ship_date_id | integer | null: false |
-| price        | integer | null: false |
+| Column       | Type    | Options                        |
+| ------------ | ------- | ------------------------------ |
+| name         | string  | null: false                    |
+| introduce    | text    | null: false                    |
+| type_id      | integer | null: false                    |
+| codition_id  | integer | null: false                    |
+| ship_fee_id  | integer | null: false                    |
+| ship_from_id | integer | null: false, foreign_key: true |
+| ship_date_id | integer | null: false, foreign_key: true |
+| price        | integer | null: false                    |
 
 ### Association
 
 - belongs_to :user
+- has_one :purchases
 
-## shippong テーブル
+## shipping テーブル
 
 | Column       | Type    | Options     |
 | ------------ | ------- | ----------- |
