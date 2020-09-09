@@ -27,20 +27,21 @@ Things you may want to cover:
 
 ## users テーブル
 
-| Column    | Type   | Options     |
-| --------- | ------ | ----------- |
-| nick_name | string | null: false |
-| email     | string | null: false |
-| password  | string | null: false |
-| kanji     | string | null: false |
-| katakana  | string | null: false |
-| birth     | string | null: false |
+| Column      | Type   | Options     |
+| ----------- | ------ | ----------- |
+| nick_name   | string | null: false |
+| email       | string | null: false |
+| password    | string | null: false |
+| kanji_fam   | string | null: false |
+| kanji_given | string | null: false |
+| kana_fam    | string | null: false |
+| kana_given  | string | null: false |
+| birth       | date   | null: false |
 
 ### Association
 
 - has_many :items
 - has_many :purchase
-- has_one :shipping
 
 ## items テーブル
 
