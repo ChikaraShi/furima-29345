@@ -42,6 +42,23 @@ Things you may want to cover:
 - has_many :purchase
 - has_one :shipping
 
+## items テーブル
+
+| Column    | Type   | Options     |
+| --------- | ------ | ----------- |
+| image     | string | null: false |
+| item_name | string | null: false |
+| introduce | string | null: false |
+| type      | string | null: false |
+| codition  | string | null: false |
+| ship_fee  | string | null: false |
+| ship_from | string | null: false |
+| ship_date | string | null: false |
+| price  | string | null: false |
+
+### Association
+
+- belongs_to :user
 
 
 
