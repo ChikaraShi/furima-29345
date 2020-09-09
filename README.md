@@ -62,14 +62,14 @@ Things you may want to cover:
 
 ## shippong テーブル
 
-| Column    | Type   | Options     |
-| --------- | ------ | ----------- |
-| postcode  | string | null: false |
-| state     | string | null: false |
-| city      | string | null: false |
-| add_line  | string | null: false |
-| building  | string |             |
-| number    | string | null: false |
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| postcode     | string  | null: false |
+| state        | integer | null: false |
+| city         | string  | null: false |
+| add_line     | string  | null: false |
+| building     | string  |             |
+| phone_number | string  | null: false |
 
 ### Association
 
