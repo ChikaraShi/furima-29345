@@ -82,7 +82,6 @@ Things you may want to cover:
 | --------- | ------ | ----------- |
 | user      | string | null: false |
 | item      | string | null: false |
-| bought_at | date | null: false |
 
 ### Association
 
