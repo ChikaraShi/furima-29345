@@ -55,6 +55,7 @@ Things you may want to cover:
 | ship_from_id | integer    | null: false                    |
 | ship_date_id | integer    | null: false                    |
 | price        | integer    | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -71,6 +72,7 @@ Things you may want to cover:
 | add_line        | string     | null: false                    |
 | building        | string     |                                |
 | phone_number    | string     | null: false                    |
+| purchase        | references | null: false, foreign_key: true |
 
 ### Association
 
