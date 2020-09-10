@@ -66,11 +66,11 @@ Things you may want to cover:
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | postcode        | string     | null: false                    |
-| state           | string     | null: false                    |
+| state_id        | integer    | null: false                    |
 | city            | string     | null: false                    |
 | add_line        | string     | null: false                    |
 | building        | string     |                                |
-| phone_number    | intenger   | null: false                    |
+| phone_number    | string     | null: false                    |
 
 ### Association
 
