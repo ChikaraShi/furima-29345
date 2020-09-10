@@ -45,16 +45,16 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| name         | string  | null: false |
-| introduce    | text    | null: false |
-| type_id      | integer | null: false |
-| codition_id  | integer | null: false |
-| ship_fee_id  | integer | null: false |
-| ship_from_id | integer | null: false |
-| ship_date_id | integer | null: false |
-| price        | integer | null: false |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| name         | string     | null: false                    |
+| introduce    | text       | null: false                    |
+| type_id      | integer    | null: false                    |
+| codition_id  | integer    | null: false                    |
+| ship_fee_id  | integer    | null: false                    |
+| ship_from_id | references | null: false, foreign_key: true |
+| ship_date_id | references | null: false, foreign_key: true |
+| price        | integer    | null: false                    |
 
 ### Association
 
@@ -63,14 +63,14 @@ Things you may want to cover:
 
 ## shippings テーブル
 
-| Column       | Type    | Options                        |
-| ------------ | ------- | ------------------------------ |
-| postcode     | string  | null: false                    |
-| state        | integer | null: false                    |
-| city         | string  | null: false                    |
-| add_line     | string  | null: false, foreign_key: true |
-| building     | string  |                                |
-| phone_number | string  | null: false, foreign_key: true |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| postcode     | string     | null: false                    |
+| state        | integer    | null: false                    |
+| city         | string     | null: false                    |
+| add_line     | references | null: false, foreign_key: true |
+| building     | string     |                                |
+| phone_number | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -87,5 +87,5 @@ Things you may want to cover:
 ### Association
 
 - has_one :shipping
-- belongs_to :users
-- belongs_to :items
+- belongs_to :user
+- belongs_to :item
