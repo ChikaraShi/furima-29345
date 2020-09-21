@@ -6,5 +6,39 @@ class User < ApplicationRecord
   has_many :items
   has_many :purchases
 
-  
+
+  # include ActiveModel::Model
+  # attr_accessor :name, :name_reading, :nickname, :postal_code, :prefecture, :city, :house_number, :building_name, :price
+
+  with_options presence: true do
+    validates :nick_name
+    validates :kanji_fam, format: {with:  /\A[ぁ-んァ-ン一-龥]/, message: "Last name Full-width characters and can't be blank"}
+    validates :kanji_given, format: {with:  /\A[ぁ-んァ-ン一-龥]/, message: "First name Full-width characters and can't be blank"}
+    validates :kana_fam, format: {with: /\A[ァ-ヶー－]+\z/, message: "Last name kana Full-width katakana characters and can't be blank"}
+    validates :kana_given, format: {with: /\A[ァ-ヶー－]+\z/, message: "First name kana Full-width katakana characters and can't be blank"}
+    validates :birth
+  end
+
+  validates_format_of :password, :with => /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/
+
+  # with_options /\A[ぁ-んァ-ン一-龥]/ do
+  #   validates :kanji_fam, message: "Last name Full-width characters"
+  #   validates :kanji_given, message: "First name Full-width characters"
+  # end
+
+  # with_options /\A[ぁ-んァ-ン一-龥]/ do
+  #   validates :kanji_fam, message: "Last name Full-width characters"
+  #   validates :kanji_given, message: "First name Full-width characters"
+  # end
+
+  # def save
+  #   # ユーザーの情報を保存し、「user」という変数に入れている
+  #   user = User.create(name: name, name_reading: name_reading, nickname: nickname)
+  #   # 住所の情報を保存
+  #   Address.create(postal_code: postal_code, prefecture: prefecture, city: city, house_number: house_number, building_name: building_name,user_id: user.id)
+  #   # 寄付金の情報を保存
+  #   Donation.create(price: price, user_id: user.id)
+  # end
+
+
 end
