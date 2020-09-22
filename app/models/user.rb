@@ -21,16 +21,6 @@ class User < ApplicationRecord
 
   validates_format_of :password, :with => /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/
 
-  # with_options /\A[ぁ-んァ-ン一-龥]/ do
-  #   validates :kanji_fam, message: "Last name Full-width characters"
-  #   validates :kanji_given, message: "First name Full-width characters"
-  # end
-
-  # with_options /\A[ぁ-んァ-ン一-龥]/ do
-  #   validates :kanji_fam, message: "Last name Full-width characters"
-  #   validates :kanji_given, message: "First name Full-width characters"
-  # end
-
   # def save
   #   # ユーザーの情報を保存し、「user」という変数に入れている
   #   user = User.create(name: name, name_reading: name_reading, nickname: nickname)
