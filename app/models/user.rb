@@ -6,8 +6,8 @@ class User < ApplicationRecord
   has_many :items
   has_many :purchases
 
-  # include ActiveModel::Model
-  # attr_accessor :name, :name_reading, :nickname, :postal_code, :prefecture, :city, :house_number, :building_name, :price
+  NAME_REGEX = /\A[ぁ-んァ-ン一-龥]/
+  KANAME_REGEX = /\A[ァ-ヶー－]+\z/
 
   with_options presence: true do
     validates :nick_name
@@ -29,3 +29,4 @@ class User < ApplicationRecord
   #   Donation.create(price: price, user_id: user.id)
   # end
 end
+
