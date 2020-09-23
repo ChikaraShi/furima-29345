@@ -1,4 +1,4 @@
-class Items < ApplicationRecord
+class Item < ApplicationRecord
   belongs_to :user
   has_one :purchase
 
@@ -15,25 +15,6 @@ class Items < ApplicationRecord
     validates :user
   end
   validates :price, numericality: { only_integer: true }
-  validates :price, numericality: { :less_than_or_equal_to 300, :greater_than_or_equal_to 9999999 }
-
-  validates_format_of :password, with: /([0-9].*[a-zA-Z]|[a-zzA-Z].*[0-9])/
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  validates :price, inclusion: { in: 300..9999999 }
 
 end
