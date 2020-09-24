@@ -62,7 +62,7 @@ group :production do
 end
 
 gem 'devise'
-
+gem 'active_hash'
 gem 'rspec-rails', '~> 4.0.0'
 gem 'factory_bot_rails'
 
