@@ -34,8 +34,12 @@ RSpec.describe Item, type: :model do
       @item.valid?
       expect(@item.errors.full_messages).to include('Price is not a number')
     end
-    it 'priceの価格範囲' do
+    it 'priceのmin価格範囲' do
       @item.price = '299'
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price is not included in the list")
+    end
+    it 'priceのmax価格範囲' do
       @item.price = '10000000'
       @item.valid?
       expect(@item.errors.full_messages).to include("Price is not included in the list")
