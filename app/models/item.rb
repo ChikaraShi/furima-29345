@@ -2,8 +2,7 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
   has_one :purchase
-  
-  
+
   belongs_to_active_hash :type
   belongs_to_active_hash :condition
   belongs_to_active_hash :ship_fee
@@ -30,6 +29,5 @@ class Item < ApplicationRecord
   validates :ship_date_id, numericality: { other_than: 1 }
 
   validates :price, numericality: { only_integer: true }
-  validates :price, inclusion: { in: 300..9999999 }
-
+  validates :price, inclusion: { in: 300..9_999_999 }
 end

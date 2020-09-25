@@ -37,37 +37,37 @@ RSpec.describe Item, type: :model do
     it 'priceのmin価格範囲' do
       @item.price = '299'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price is not included in the list")
+      expect(@item.errors.full_messages).to include('Price is not included in the list')
     end
     it 'priceのmax価格範囲' do
       @item.price = '10000000'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price is not included in the list")
+      expect(@item.errors.full_messages).to include('Price is not included in the list')
     end
     it 'カテゴリが空だと登録できない' do
       @item.type_id = '1'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Type must be other than 1")
+      expect(@item.errors.full_messages).to include('Type must be other than 1')
     end
     it '商品状態が空だと登録できない' do
       @item.condition_id = '1'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Condition must be other than 1")
+      expect(@item.errors.full_messages).to include('Condition must be other than 1')
     end
     it '送料が空だと登録できない' do
       @item.ship_fee_id = '1'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship fee must be other than 1")
+      expect(@item.errors.full_messages).to include('Ship fee must be other than 1')
     end
     it '発送元が空だと登録できない' do
       @item.ship_from_id = '1'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship from must be other than 1")
+      expect(@item.errors.full_messages).to include('Ship from must be other than 1')
     end
     it '発送までの日数が空だと登録できない' do
       @item.ship_date_id = '1'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship date must be other than 1")
+      expect(@item.errors.full_messages).to include('Ship date must be other than 1')
     end
   end
 end
