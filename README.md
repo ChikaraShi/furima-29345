@@ -50,7 +50,7 @@ Things you may want to cover:
 | name         | string     | null: false                    |
 | introduce    | text       | null: false                    |
 | type_id      | integer    | null: false                    |
-| codition_id  | integer    | null: false                    |
+| condition_id | integer    | null: false                    |
 | ship_fee_id  | integer    | null: false                    |
 | ship_from_id | integer    | null: false                    |
 | ship_date_id | integer    | null: false                    |
