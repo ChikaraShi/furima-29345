@@ -8,6 +8,6 @@ FactoryBot.define do
     kanji_given { '太郎' }
     kana_fam { 'ホゲ' }
     kana_given { 'タロウ' }
-    birth {'2015-12-31'}
+    birth { '2015-12-31'}
   end
 end
