@@ -46,5 +46,4 @@ class ItemsController < ApplicationController
   def move_to_show
     @item = Item.find(params[:id])
   end
-
 end
