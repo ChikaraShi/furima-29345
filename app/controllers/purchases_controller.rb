@@ -12,14 +12,11 @@ class PurchasesController < ApplicationController
     if @purchase_shipping.valid?
       pay_item
       @purchase_shipping.save
-      return redirect_to root_path
+      redirect_to root_path
     else
       render :index
     end
   end
-
-
-
 
   private
 
@@ -32,13 +29,11 @@ class PurchasesController < ApplicationController
   end
 
   def pay_item
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: @item.price,  # 商品の値段
-      card: purchase_params[:token],    # カードトークン
+      card: purchase_params[:token], # カードトークン
       currency: 'jpy'                 # 通貨の種類（日本円）
     )
   end
-
-
 end

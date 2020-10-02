@@ -3,5 +3,4 @@ class Shipping < ApplicationRecord
   belongs_to_active_hash :state
 
   belongs_to :purchase
-
 end

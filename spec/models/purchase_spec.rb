@@ -29,12 +29,11 @@
 #     @item.valid?
 #     expect(@item.errors.full_messages).to include("Price can't be blank")
 #   end
-  
+
 #   it 'priceが空だと登録できない' do
 #     @item.price = nil
 #     @item.valid?
 #     expect(@item.errors.full_messages).to include("Price can't be blank")
 #   end
-  
-  
+
 # end
